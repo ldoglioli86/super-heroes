@@ -67,7 +67,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: net.minidev:json-smart:2.4.8" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: net.minidev:accessors-smart:2.4.8" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.ow2.asm:asm:9.1" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.36" level="project" />
     <orderEntry type="library" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:2.3.3" level="project" />
     <orderEntry type="library" name="Maven: jakarta.activation:jakarta.activation-api:1.2.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.assertj:assertj-core:3.22.0" level="project" />
@@ -141,5 +140,23 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.security:spring-security-test:5.7.6" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:5.7.6" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-crypto:5.7.6" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-data-redis:2.7.9-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-redis:2.7.7" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-keyvalue:2.7.7" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-oxm:5.3.25" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context-support:5.3.25" level="project" />
+    <orderEntry type="library" name="Maven: io.lettuce:lettuce-core:6.1.10.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.87.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-handler:4.1.87.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-resolver:4.1.87.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-buffer:4.1.87.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport-native-unix-common:4.1.87.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec:4.1.87.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport:4.1.87.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.projectreactor:reactor-core:3.4.26" level="project" />
+    <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.4" level="project" />
+    <orderEntry type="library" name="Maven: redis.clients:jedis:3.8.0" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.36" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-pool2:2.11.1" level="project" />
   </component>
 </module>

@@ -4,3 +4,4 @@
 
 # OS X generated files #
 .DS_Store
+/dump.rdb
