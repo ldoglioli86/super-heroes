@@ -13,6 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import java.io.Serializable;
+import java.util.Objects;
 
 @Entity
 @Table(name = "super_hero")
@@ -79,5 +80,25 @@ public class SuperHero implements Serializable {
 
     public void setPublisher(Publisher publisher) {
         this.publisher = publisher;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        SuperHero superHero = (SuperHero) o;
+        return id.equals(superHero.id)
+                && name.equals(superHero.name)
+                && gender == superHero.gender
+                && race == superHero.race
+                && alignment == superHero.alignment
+                && publisher.equals(superHero.publisher);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, gender, race, alignment, publisher);
     }
 }
