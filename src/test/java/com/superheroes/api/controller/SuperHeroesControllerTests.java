@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithUserDetails;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -17,6 +18,7 @@ public class SuperHeroesControllerTests {
     private MockMvc mockMvc;
 
     @Test
+    @WithUserDetails("ldoglioli")
     void getRequestShouldRetrieveOk() throws Exception {
             mockMvc.perform(get("/super-heroes").contentType(MediaType.APPLICATION_JSON))
                    .andExpect(status().isOk());
