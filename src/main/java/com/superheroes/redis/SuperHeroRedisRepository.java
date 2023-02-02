@@ -25,6 +25,17 @@ public class SuperHeroRedisRepository implements IRedisRepository{
     }
 
     @Override
+    public void refresh(Iterable<SuperHero> newValues) {
+        var oldValues = findAll();
+        for (var superHero : oldValues ) {
+            delete(String.valueOf(superHero.getId()));
+        }
+        for (SuperHero superHero: newValues) {
+            save(superHero);
+        }
+    }
+
+    @Override
     public List<SuperHero> findAll() {
         return hashOperations.values(KEY);
     }

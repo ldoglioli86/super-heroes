@@ -17,6 +17,7 @@ public class RedisConfiguration {
     RedisTemplate<String, SuperHero> redisTemplate() {
         final RedisTemplate<String, SuperHero> redisTemplate = new RedisTemplate<>();
         redisTemplate.setConnectionFactory(jedisConnectionFactory());
+        redisTemplate.getConnectionFactory().getConnection().flushDb();
         return redisTemplate;
     }
 }
