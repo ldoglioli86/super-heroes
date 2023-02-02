@@ -58,6 +58,15 @@ public class HasExceptionHandlers {
         return buildErrorResponse(exception, HttpStatus.NOT_FOUND, request);
     }
 
+    @ExceptionHandler(IllegalArgumentException.class)
+    @ResponseStatus(HttpStatus.LENGTH_REQUIRED)
+    public ResponseEntity<ErrorResponse> handleIllegalArgumentExceptionException(
+            IllegalArgumentException exception,
+            WebRequest request
+    ){
+        return buildErrorResponse(exception, HttpStatus.LENGTH_REQUIRED, request);
+    }
+
     private ResponseEntity<ErrorResponse> buildErrorResponse(
             Exception exception,
             HttpStatus httpStatus,
