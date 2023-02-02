@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.superheroes</groupId>
-    <artifactId>api</artifactId>
+    <artifactId>superheroes-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>superheroes</name>
     <description>superheroes</description>
