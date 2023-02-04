@@ -16,7 +16,22 @@ public class ExecutionTimeLogAspect {
         long startTime = System.currentTimeMillis();
         Object result = point.proceed();
         long endTime = System.currentTimeMillis();
-        log.info("Execution Time for, Class: "+ point.getSignature().getDeclaringTypeName() +", Method: "+ point.getSignature().getName() + " is: " + (endTime-startTime) +"ms.");
+        var executionTime = endTime - startTime;
+        log.info(generateLogMessage(
+                point.getSignature().getDeclaringTypeName(),
+                point.getSignature().getName(),
+                executionTime));
         return result;
+    }
+
+    private String generateLogMessage(String className, String signatureName, Long executionTime) {
+        var sb = new StringBuilder();
+        sb.append("Execution Time for, Class: ")
+                .append(className)
+                .append(", Method: ").append(signatureName)
+                .append(" is: ")
+                .append(executionTime)
+                .append("ms.");
+        return sb.toString();
     }
 }
