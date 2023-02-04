@@ -13,10 +13,10 @@ public class MockUserDetailsService implements UserDetailsService  {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        var usuarios = Map.of(
+        var users = Map.of(
                 "ldoglioli", "USER"
         );
-        var role = usuarios.get(username);
+        var role = users.get(username);
         if (role != null) {
             User.UserBuilder userBuilder = User.withUsername(username);
             var passwordEncoder = new BCryptPasswordEncoder();
